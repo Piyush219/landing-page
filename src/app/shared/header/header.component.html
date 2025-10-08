@@ -1,0 +1,37 @@
+<header class="header">
+  <div class="header-wrapper">
+    <div class="header-left">
+      <img src="assets/header_icon.png" alt="Logo" class="logo" />
+
+      <!-- Mobile menu button -->
+      <button class="menu-btn" (click)="toggleMenu()">
+        <i class="fa fa-bars"></i>
+      </button>
+
+      <!-- Search bar -->
+      <div class="search-box">
+        <input type="text" placeholder="Search in docquity" />
+        <i class="fa fa-search"></i>
+      </div>
+    </div>
+
+    <!-- Center section (desktop only) -->
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#" class="active">Webinar</a>
+      <a href="#">Calendar</a>
+      <a href="#">Notifications</a>
+    </nav>
+
+    <!-- Right section -->
+    <div class="header-right">
+      <button class="post-btn"><i class="fa fa-plus"></i> Post</button>
+
+      <div class="profile">
+        <img src="assets/user_profile.png" alt="User" />
+        <span class="username">Aaron</span>
+        <i class="fa fa-chevron-down"></i>
+      </div>
+    </div>
+  </div>
+</header>

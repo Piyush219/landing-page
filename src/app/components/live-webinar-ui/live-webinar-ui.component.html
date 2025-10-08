@@ -1,0 +1,13 @@
+<div class="webinar-section-container">
+    <div class="section-header">
+        <h3 class="category-title">Live webinars</h3>
+        <span class="view-all">
+            View all
+        </span>
+    </div>
+    <div class="live-webinar-container">
+        @for(config of liveWebinarConfig; track $index){
+        <app-webinar-card-ui [config]="config"></app-webinar-card-ui>
+    }
+    </div>
+</div>

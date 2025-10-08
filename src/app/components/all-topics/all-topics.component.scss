@@ -1,0 +1,42 @@
+.container{
+    margin: 40px 0;
+}
+
+.tags-container {
+  background-color: #D9F4F9;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.tags-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.custom-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 16px;
+  border: 1px solid #D0D0D0;
+  background-color: #ffffff;
+  color: #1B4A52;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.custom-chip:hover {
+  border-color: #999;
+  background-color: #f7f7f7;
+}
+
+.custom-chip.selected {
+  background-color: #00bcd4;
+  color: white;
+  border-color: #00bcd4;
+}

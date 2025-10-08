@@ -1,0 +1,71 @@
+<div class="card-container">
+  <div
+    class="thumbnail-wrapper"
+    [style.background-image]="'url(' + config.thumbnailUrl + ')'"
+  >
+    <div *ngIf="config.liveBadge?.show" class="badge live-badge">
+      <img *ngIf="config.liveBadge.icon" src="/assets/live_icon.svg" />
+      {{ config.liveBadge.text || "Live" }}
+    </div>
+    <div *ngIf="config.audienceBadge?.show" class="badge audience-badge">
+      <img *ngIf="config.audienceBadge.icon" src="/assets/People.svg" />
+      {{ config.audienceBadge.count }}+
+    </div>
+    <div *ngIf="config.duration" class="duration-badge">
+      {{ config.duration }}
+    </div>
+  </div>
+
+  <div class="content-area">
+    <div *ngIf="config.credits?.show" class="credits-badge">
+      <img src="/assets/credit_star.png" />
+      <span class="credits-text"> {{ config.credits.amount }} Credits </span>
+    </div>
+
+    <h3 class="card-title">{{ config.title }}</h3>
+    <p *ngIf="config?.description" class="card-description">
+      {{ config.description }}
+    </p>
+
+    <div *ngIf="config.author" class="author-info">
+      <img
+        *ngIf="config.author.logoUrl"
+        [src]="config.author.logoUrl"
+        alt="Author Logo"
+        class="author-logo"
+      />
+      <span class="author-name">by {{ config.author.name }}</span>
+    </div>
+
+    <div
+      *ngIf="config.keyHighlights && config.keyHighlights.length > 0"
+      class="key-highlights"
+    >
+      <h4>KEY HIGHLIGHTS</h4>
+      <ul>
+        <li *ngFor="let highlight of config.keyHighlights">{{ highlight }}</li>
+      </ul>
+    </div>
+
+    <button
+      *ngIf="config.button"
+      class="action-button"
+      (click)="onButtonClick()"
+    >
+      {{ config.button.text }}
+    </button>
+
+    <div class="goes-live-container" *ngIf="config.goLiveInfo">
+      <div>
+        <h4>Goes Live on</h4>
+        <span>{{config.goLiveInfo.date}}</span>
+      </div>
+      <div>
+        <button>
+          <img src="/assets/bell_icon.svg" />
+          Notify Me
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

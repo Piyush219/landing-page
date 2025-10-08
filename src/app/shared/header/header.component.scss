@@ -1,0 +1,144 @@
+.header {
+  box-shadow: 0px 1px 60px 0px #0000000d;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+
+  .header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    background: #fff;
+    max-width: 1125px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    height: 28px;
+  }
+
+  .menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  .search-box {
+    position: relative;
+
+    input {
+      border: 1px solid #929090;
+      border-radius: 12px;
+      padding: 16px;
+      width: 342px;
+      font-size: 14px;
+      background-color: #efefef;
+    }
+
+    i {
+      position: absolute;
+      right: 10px;
+      top: 16px;
+      color: #737171;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    a {
+      text-decoration: none;
+      color: #555;
+      font-size: 14px;
+      position: relative;
+
+      &.active {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .post-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(
+        94.21deg,
+        #252424 4.48%,
+        #252424 4.49%,
+        #424242 87.94%
+      );
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      padding: 6px 12px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      img {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+      }
+
+      i {
+        font-size: 12px;
+        color: #666;
+      }
+    }
+  }
+}
+
+/* ---------- RESPONSIVENESS ---------- */
+@media (max-width: 992px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .search-box input {
+    width: 160px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    .search-box input {
+      width: 120px;
+    }
+
+    .post-btn {
+      display: none;
+    }
+
+    .username {
+      display: none;
+    }
+  }
+}

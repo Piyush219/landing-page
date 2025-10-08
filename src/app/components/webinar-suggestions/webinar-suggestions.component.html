@@ -1,0 +1,7 @@
+<div class="webinar-section-container">
+  <div class="webinar-suggestion-container">
+    @for(config of liveWebinarConfig; track $index){
+    <app-webinar-card-ui [config]="config"></app-webinar-card-ui>
+    }
+  </div>
+</div>

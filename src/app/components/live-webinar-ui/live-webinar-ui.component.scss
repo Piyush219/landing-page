@@ -1,0 +1,31 @@
+.webinar-section-container {
+  margin-top: 24px;
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .category-title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    color: #444242;
+  }
+
+  .view-all {
+    border: 1px solid #1d1919;
+    padding: 6px 8px;
+    border-radius: 4px;
+  }
+
+  .live-webinar-container {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 24px;
+    background: linear-gradient(190.25deg, #ffd8bd -92.66%, #ffffff 112.07%);
+    border-radius: 4px;
+  }
+}

@@ -1,0 +1,18 @@
+<div class="profile-card">
+  <div class="image-container">
+    <img [src]="config.imageUrl" alt="Profile Image" class="profile-image" />
+
+    <div *ngIf="config.isLive" class="live-badge">
+      <span class="live-dot"></span>
+      <span class="live-text">Live</span>
+    </div>
+  </div>
+
+  <div class="profile-details">
+    <div class="name-container">
+      <h3 class="name">{{ config.name }}</h3>
+      <span class="arrow">></span>
+    </div>
+    <p class="specialization">{{ config.specialization }}</p>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+::ng-deep.sidebar-container {
+  width: 250px;
+  padding-right: 20px;
+
+  .mat-expansion-panel-header {
+    background: white !important;
+  }
+
+  .mat-expansion-panel-body {
+    background: white !important;
+  }
+}
+
+.sidebar-panel {
+  box-shadow: none !important; /* Remove shadow from material panel */
+  border-bottom: 1px solid #eee;
+}
+
+.panel-title {
+  font-weight: 600;
+  color: #444242;
+}
+
+.search-field {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* Material component overrides for search field appearance */
+.mat-form-field-wrapper {
+  padding-bottom: 0 !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-infix {
+  padding: 10px 0 !important;
+}
+
+.checkbox-item {
+  margin-bottom: 8px;
+}

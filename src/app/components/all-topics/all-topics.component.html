@@ -1,0 +1,10 @@
+<div class="container">
+  <h3 class="section-title">Browse by topic</h3>
+  <div class="tags-container">
+    <div class="tags-wrapper">
+      <div *ngFor="let tag of tags" class="custom-chip">
+        {{ tag.name }} ({{ tag.count }})
+      </div>
+    </div>
+  </div>
+</div>
